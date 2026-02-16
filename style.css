@@ -1,15 +1,54 @@
-/* Globalus fonas: WebP kaip pirmenybė, JPG kaip fallback */
+/* ===== Baziniai kintamieji ===== */
+:root {
+  --bg: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --card: #f8fafc;
+  --accent: #155e75;
+  --divider: #e2e8f0;
+
+  /* Lietuvos vėliavos spalvos */
+  --lt-yellow: #F7D117;
+  --lt-green: #006A44;
+  --lt-red:   #C1272D;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --card: #0f172a;
+    --accent: #22d3ee;
+    --divider: #1f2937;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body { min-height: 100%; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== Globalus fonas (Variantas A) ===== */
 body {
   background:
+    /* overlay skaitomumui */
     linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    /* WebP prioritetas + JPG kaip fallback */
     image-set(
       url("assets/img/Flag_of_Lithuania.webp") type("image/webp") 1x,
       url("assets/img/Flag_of_Lithuania.jpg")  type("image/jpeg") 1x
     ) center / cover no-repeat fixed;
-  background-color: var(--bg);
+  background-color: var(--bg); /* fallback */
 }
 
-/* Dark režimas – intensyvesnis overlay geresniam kontrastui */
 @media (prefers-color-scheme: dark) {
   body {
     background:
@@ -22,12 +61,156 @@ body {
   }
 }
 
+/* Jei mobiliajame „fixed“ sukelia mikčiojimą, galima pakeisti į scroll */
+/* body { background-attachment: scroll; } */
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.site-header {
+  padding: 2rem 0 1rem;
+  background:
+    linear-gradient(90deg, var(--lt-yellow) 0 33.33%, var(--lt-green) 33.33% 66.66%, var(--lt-red) 66.66% 100%) no-repeat;
+  background-size: 100% 6px;
+  background-position: bottom left;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  text-shadow: 0 1px 0 rgba(0,0,0,.08);
+}
+
+.subtitle {
+  margin: .25rem 0 0;
+  color: var(--muted);
+  font-weight: 600;
+  text-shadow: 0 1px 0 rgba(0,0,0,.08);
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  text-shadow: 0 1px 0 rgba(0,0,0,.08);
+}
+
+h3 {
+  margin: .5rem 0;
+  font-size: 1.15rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--divider);
+  margin: 2rem 0;
+}
+
+/* ===== Laikmačiai ===== */
+.timers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+@media (max-width: 860px) {
+  .timers-grid { grid-template-columns: 1fr; }
+}
+
+.timer-card {
+  background: color-mix(in srgb, var(--card) 92%, transparent);
+  border: 1px solid var(--divider);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.timer-card .tagline {
+  margin: 0 0 .5rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.countdown {
+  display: grid;
+  grid-auto-flow: column;
+  gap: .75rem;
+  align-items: center;
+  justify-content: start;
+  margin: .5rem 0 .25rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown .unit {
+  background: #ffffff10;
+  border: 1px solid var(--divider);
+  border-radius: 10px;
+  padding: .5rem .75rem;
+  text-align: center;
+  min-width: 74px;
+}
+
+.unit .value {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.unit .label {
+  display: block;
+  color: var(--muted);
+  font-size: .8rem;
+  margin-top: .15rem;
+}
+
+.next-date {
+  margin: .25rem 0 0;
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+.note {
+  margin-top: .75rem;
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+/* ===== Himno tekstas ===== */
+.hymn {
+  background: color-mix(in srgb, var(--card) 92%, transparent);
+  border: 1px solid var(--divider);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.hymn p {
+  margin: .75rem 0;
+  font-size: 1.05rem;
+}
+
+/* Aktyvus posmas (karaokė) */
+.hymn p.active {
+  background: linear-gradient(90deg, #fff6 0%, transparent 100%);
+  outline: 2px solid var(--divider);
+  border-radius: 8px;
+}
+
+/* Šaltinis */
+.source {
+  margin-top: .5rem;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+/* ===== Audio grotuvas ===== */
 .audio-player {
   display: grid;
   grid-template-columns: auto auto 1fr;
   gap: .75rem 1rem;
   align-items: center;
-  background: var(--card);
+  background: color-mix(in srgb, var(--card) 92%, transparent);
   border: 1px solid var(--divider);
   border-radius: 12px;
   padding: 1rem;
@@ -55,9 +238,16 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-/* „Karaokės“ efektas posmui, kuris atitinka einamą laiką */
-.hymn p.active {
-  background: linear-gradient(90deg, #fff4 0%, transparent 100%);
-  outline: 2px solid var(--divider);
-  border-radius: 8px;
+/* ===== Poraštė ===== */
+.site-footer {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--divider);
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Judesių mažinimas (jei įjungta OS nuostata) */
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
 }
