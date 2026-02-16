@@ -4,19 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tautiška giesmė – Laikmačiai ir himnas</title>
-
-  <meta name="description" content="Tautiška giesmė su laikmačiais iki vasario 16-osios, kovo 11-osios ir liepos 6-osios.">
+  <meta name="description" content="Tautiška giesmė su laikmačiais iki Vasario 16-osios, Kovo 11-osios ir Liepos 6-osios.">
   <meta name="color-scheme" content="light dark">
 
-  <!-- GOOGLE FONT: INTER -->
+  <!-- Šriftas: INTER (teisingos žymės, jokio plain teksto) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
+  <!-- Pagrindinis stilius -->
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <header class="site-header">
     <div class="container">
@@ -51,28 +49,24 @@
           <p class="next-date"></p>
         </article>
       </div>
-      <p class="note">
-        Laikmačiai automatiškai persijungia į artimiausią šių datų įvykį (atsižvelgiant į jūsų laiko zoną).
-      </p>
+      <p class="note">Laikmačiai automatiškai persijungia į artimiausią šių datų įvykį (atsižvelgiant į jūsų laiko zoną).</p>
     </section>
 
     <hr class="divider" />
 
-    <!-- NAUJAS BLOKAS: HIMNO GARSAS -->
+    <!-- HIMNO GARSAS -->
     <section aria-labelledby="audio">
       <h2 id="audio">Himno įrašas</h2>
 
       <div class="audio-player">
         <audio id="hymn-audio" preload="metadata" controls>
-          assets/audio/tautiska-giesme.mp3
-          assets/audio/tautiska-giesme.ogg
+          <source src="assets/audio/tautiska-giesme.mp3" type="audio/mpeg">
+          <source src="assets/audio/tautiska-giesme.ogg" type="audio/ogg">
           Jūsų naršyklė nepalaiko HTML5 audio. Atsisiųsti: 
-          assets/audio/tautiska-giesme.mp3MP3</a>
+          <a href="assets/audio/tautiska-giesme.mp3">MP3</a>
         </audio>
 
-        <button id="play-toggle" class="btn" aria-label="Leisti / Pauzė">
-          ▶️ Leisti
-        </button>
+        <button id="play-toggle" class="btn" aria-label="Leisti / Pauzė">▶️ Leisti</button>
 
         <div class="audio-meta">
           <span id="current-time">00:00</span> /
@@ -80,9 +74,7 @@
         </div>
       </div>
 
-      <p class="note">
-        Patarimas: laikyk garso failą 128–192 kbps MP3 formatu (failo dydis bus ~1–3 MB).
-      </p>
+      <p class="note">Patarimas: laikyk garso failą 128–192 kbps MP3 formatu (1–3 MB).</p>
     </section>
 
     <hr class="divider" />
@@ -90,7 +82,6 @@
     <section aria-labelledby="himnas">
       <h2 id="himnas">Himno tekstas</h2>
       <article class="hymn" lang="lt" aria-label="Tautiškos giesmės tekstas">
-        <!-- PASIRINKTINAI: data-start – sekundės nuo garso pradžios, jei nori paryškinti posmus grojant -->
         <p data-start="0"><strong>Lietuva, Tėvyne mūsų,</strong><br>
         Tu didvyrių žeme,<br>
         Iš praeities Tavo sūnūs<br>
@@ -111,21 +102,17 @@
         Vardan tos Lietuvos<br>
         Vienybė težydi!</p>
       </article>
-      <p class="source">
-        Tekstas: Vincas Kudirka (1858–1899). Nacionalinis himnas (viešasis domenas).
-      </p>
+      <p class="source">Tekstas: Vincas Kudirka (1858–1899). Nacionalinis himnas (viešasis domenas).</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>
-        <span>❤️ Lietuvai</span> •
-        <span>Atviro kodo projektas (GitHub Pages)</span>
-      </p>
+      <p><span>❤️ Lietuvai</span> • <span>Atviro kodo projektas (GitHub Pages)</span></p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Teisingas JS įkėlimas: vienintelis script su src -->
+  <script src="script.js" defer></script>
 </body>
 </html>
