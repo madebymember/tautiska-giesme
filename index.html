@@ -4,15 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tautiška giesmė – Laikmačiai ir himnas</title>
-  <meta name="description" content="Tautiška giesmė su laikmačiais iki Vasario 16-osios, Kovo 11-osios ir Liepos 6-osios.">
+  <meta name="description" content="Tautiška giesmė su laikmačiais iki Vasario 16-osios, Kovo 11-osios ir Liepos 6-osios bei himno garsu.">
   <meta name="color-scheme" content="light dark">
 
-  <!-- Šriftas: INTER (teisingos žymės, jokio plain teksto) -->
+  <!-- Šriftas: Inter -->
   https://fonts.googleapis.com
   https://fonts.gstatic.com
   https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap
 
-  <!-- Pagrindinis stilius -->
+  <!-- Stiliai -->
   style.css
 </head>
 <body>
@@ -24,6 +24,7 @@
   </header>
 
   <main class="container">
+    <!-- Laikmačiai -->
     <section aria-labelledby="laikmaciai">
       <h2 id="laikmaciai">Laikmačiai iki valstybinių švenčių</h2>
 
@@ -49,12 +50,15 @@
           <p class="next-date"></p>
         </article>
       </div>
-      <p class="note">Laikmačiai automatiškai persijungia į artimiausią šių datų įvykį (atsižvelgiant į jūsų laiko zoną).</p>
+
+      <p class="note">
+        Laikmačiai automatiškai skaičiuoja iki artimiausios datos (vietiniu laiku).
+      </p>
     </section>
 
     <hr class="divider" />
 
-    <!-- HIMNO GARSAS -->
+    <!-- Himno garsas -->
     <section aria-labelledby="audio">
       <h2 id="audio">Himno įrašas</h2>
 
@@ -66,7 +70,9 @@
           assets/audio/tautiska-giesme.mp3MP3</a>
         </audio>
 
-        <button id="play-toggle" class="btn" aria-label="Leisti / Pauzė">▶️ Leisti</button>
+        <button id="play-toggle" class="btn" aria-label="Leisti / Pauzė">
+          ▶️ Leisti
+        </button>
 
         <div class="audio-meta">
           <span id="current-time">00:00</span> /
@@ -74,14 +80,17 @@
         </div>
       </div>
 
-      <p class="note">Patarimas: laikyk garso failą 128–192 kbps MP3 formatu (1–3 MB).</p>
+      <p class="note">Patarimas: naudok 128–192 kbps MP3 (1–3 MB).</p>
     </section>
 
     <hr class="divider" />
 
+    <!-- Himno tekstas -->
     <section aria-labelledby="himnas">
       <h2 id="himnas">Himno tekstas</h2>
+
       <article class="hymn" lang="lt" aria-label="Tautiškos giesmės tekstas">
+        <!-- data-start (sek.) – dėl „karaokės“ paryškinimo (adapteriuok pagal savo įrašą) -->
         <p data-start="0"><strong>Lietuva, Tėvyne mūsų,</strong><br>
         Tu didvyrių žeme,<br>
         Iš praeities Tavo sūnūs<br>
@@ -102,6 +111,7 @@
         Vardan tos Lietuvos<br>
         Vienybė težydi!</p>
       </article>
+
       <p class="source">Tekstas: Vincas Kudirka (1858–1899). Nacionalinis himnas (viešasis domenas).</p>
     </section>
   </main>
@@ -110,9 +120,3 @@
     <div class="container">
       <p><span>❤️ Lietuvai</span> • <span>Atviro kodo projektas (GitHub Pages)</span></p>
     </div>
-  </footer>
-
-  <!-- Teisingas JS įkėlimas: vienintelis script su src -->
-  script.js</script>
-</body>
-</html>
