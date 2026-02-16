@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tautiška giesmė – Laikmatis iki 02-16, 03-11 ir 07-06</title>
+  <meta name="description" content="Tautiška giesmė su laikmačiais iki Vasario 16-osios, Kovo 11-osios ir Liepos 6-osios.">
+  https://fonts.gstatic.com
+  https://fonts.googleapis.com
+  https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap
+  style.css
+  <meta name="color-scheme" content="light dark">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>„Tautiška giesmė“</h1>
+      <p class="subtitle">Vincas Kudirka • Lietuvos nacionalinis himnas</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section aria-labelledby="laikmaciai">
+      <h2 id="laikmaciai">Laikmačiai iki valstybinių švenčių</h2>
+
+      <div class="timers-grid" role="list">
+        <article class="timer-card" role="listitem" aria-live="polite">
+          <h3>Vasario 16-oji</h3>
+          <p class="tagline">Lietuvos valstybės atkūrimo diena</p>
+          <div class="countdown" data-month="2" data-day="16"></div>
+          <p class="next-date"></p>
+        </article>
+
+        <article class="timer-card" role="listitem" aria-live="polite">
+          <h3>Kovo 11-oji</h3>
+          <p class="tagline">Nepriklausomybės atkūrimo diena</p>
+          <div class="countdown" data-month="3" data-day="11"></div>
+          <p class="next-date"></p>
+        </article>
+
+        <article class="timer-card" role="listitem" aria-live="polite">
+          <h3>Liepos 6-oji</h3>
+          <p class="tagline">Valstybės (Lietuvos karaliaus Mindaugo karūnavimo) diena</p>
+          <div class="countdown" data-month="7" data-day="6"></div>
+          <p class="next-date"></p>
+        </article>
+      </div>
+      <p class="note">
+        Laikmačiai automatiškai persijungia į artimiausią šių datų įvykį (atsižvelgiant į jūsų laiko zoną).
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- NAUJAS BLOKAS: HIMNO GARSAS -->
+    <section aria-labelledby="audio">
+      <h2 id="audio">Himno įrašas</h2>
+
+      <div class="audio-player">
+        <audio id="hymn-audio" preload="metadata" controls>
+          assets/audio/tautiska-giesme.mp3
+          assets/audio/tautiska-giesme.ogg
+          Jūsų naršyklė nepalaiko HTML5 audio. Atsisiųsti: 
+          assets/audio/tautiska-giesme.mp3MP3</a>
+        </audio>
+
+        <button id="play-toggle" class="btn" aria-label="Leisti / Pauzė">
+          ▶️ Leisti
+        </button>
+
+        <div class="audio-meta">
+          <span id="current-time">00:00</span> /
+          <span id="duration">--:--</span>
+        </div>
+      </div>
+
+      <p class="note">
+        Patarimas: laikyk garso failą 128–192 kbps MP3 formatu (failo dydis bus ~1–3 MB).
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <section aria-labelledby="himnas">
+      <h2 id="himnas">Himno tekstas</h2>
+      <article class="hymn" lang="lt" aria-label="Tautiškos giesmės tekstas">
+        <!-- PASIRINKTINAI: data-start – sekundės nuo garso pradžios, jei nori paryškinti posmus grojant -->
+        <p data-start="0"><strong>Lietuva, Tėvyne mūsų,</strong><br>
+        Tu didvyrių žeme,<br>
+        Iš praeities Tavo sūnūs<br>
+        Te stiprybę semia.</p>
+
+        <p data-start="17">Tegu Tavo vaikai eina<br>
+        Vien takais dorybės,<br>
+        Tegu dirba Tavo naudai<br>
+        Ir žmonių gėrybei.</p>
+
+        <p data-start="34">Tegu saulė Lietuvoj<br>
+        Tamsumas prašalina,<br>
+        Ir šviesa, ir tiesa<br>
+        Mūs žingsnius telydi.</p>
+
+        <p data-start="52">Tegu meilė Lietuvos<br>
+        Dega mūsų širdyse,<br>
+        Vardan tos Lietuvos<br>
+        Vienybė težydi!</p>
+      </article>
+      <p class="source">
+        Tekstas: Vincas Kudirka (1858–1899). Nacionalinis himnas (viešasis domenas).
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <span>❤️ Lietuvai</span> •
+        <span>Atviro kodo projektas (GitHub Pages)</span>
+      </p>
+    </div>
+  </footer>
+
+  script.js</script>
+</body>
+</html>

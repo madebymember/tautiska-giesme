@@ -1,0 +1,41 @@
+/* ... (palik visa esamą CSS) ... */
+
+.audio-player {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: .75rem 1rem;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--divider);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.audio-player audio {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--divider);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 10px;
+  padding: .5rem .9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn:hover { background: #ffffff10; }
+
+.audio-meta {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* „Karaokės“ efektas posmui, kuris atitinka einamą laiką */
+.hymn p.active {
+  background: linear-gradient(90deg, #fff4 0%, transparent 100%);
+  outline: 2px solid var(--divider);
+  border-radius: 8px;
+}
