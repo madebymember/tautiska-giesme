@@ -1,128 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="lt">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tautiška giesmė – Laikmačiai ir himnas</title>
-  <meta name="description" content="Tautiška giesmė su laikmačiais iki Vasario 16-osios, Kovo 11-osios ir Liepos 6-osios bei himno garsu.">
-  <meta name="color-scheme" content="light dark">
-
-  <!-- Šriftas: INTER (teisingos žymės, jokio plain teksto) -->
-  https://fonts.googleapis.com
-  https://fonts.gstatic.com
-  https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap
-
-  <!-- Pagrindinis stilius -->
-  style.css
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lietuvos Respublikos himnas | Tautiška giesmė</title>
+  <meta name="description" content="Oficialaus stiliaus informacinis puslapis apie Lietuvos Respublikos himną „Tautiška giesmė“: tekstas, garso grotuvas ir pagrindinė informacija.">
+  <meta name="keywords" content="Lietuvos Respublikos himnas, Tautiška giesmė, Lietuvos himnas, himno tekstas">
+  <meta name="author" content="Marius Stauga">
+  <meta name="robots" content="index, follow">
+  <meta property="og:locale" content="lt_LT">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lietuvos Respublikos himnas | Tautiška giesmė">
+  <meta property="og:description" content="Lietuvos Respublikos himno „Tautiška giesmė“ tekstas, garso grotuvas ir nuorodos į šaltinius.">
+  <meta property="og:url" content="https://tautiškagiesmė.lt/">
+  <meta property="og:site_name" content="Tautiška giesmė">
+  <meta property="og:image" content="https://tautiškagiesmė.lt/assets/images/lietuvos-veliava.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#fdb913">
+  <link rel="canonical" href="https://tautiškagiesmė.lt/">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/theme.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Tautiška giesmė",
+    "url": "https://tautiškagiesmė.lt/",
+    "inLanguage": "lt",
+    "description": "Informacinė svetainė apie Lietuvos Respublikos himną „Tautiška giesmė“.",
+    "keywords": ["Lietuvos Respublikos himnas", "Tautiška giesmė"]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#turinys">Pereiti prie turinio</a>
+
   <header class="site-header">
-    <div class="container">
-      <h1>„Tautiška giesmė“</h1>
-      <p class="subtitle">Vincas Kudirka • Lietuvos nacionalinis himnas</p>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Pradinis puslapis">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">Tautiška giesmė</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Pagrindinė navigacija">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          Meniu
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a class="active" href="index.html" aria-current="page">Pagrindinis</a></li>
+          <li><a href="saltiniai.html">Šaltiniai</a></li>
+          <li><a href="kontaktai.html">Kontaktai</a></li>
+        </ul>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-label="Perjungti temą">
+        <span class="theme-toggle-text">Tamsus režimas</span>
+      </button>
     </div>
   </header>
 
-  <main class="container">
-    <!-- Laikmačiai -->
-    <section aria-labelledby="laikmaciai">
-      <h2 id="laikmaciai">Laikmačiai iki valstybinių švenčių</h2>
-
-      <div class="timers-grid" role="list">
-        <article class="timer-card" role="listitem" aria-live="polite">
-          <h3>Vasario 16-oji</h3>
-          <p class="tagline">Lietuvos valstybės atkūrimo diena</p>
-          <div class="countdown" data-month="2" data-day="16"></div>
-          <p class="next-date"></p>
-        </article>
-
-        <article class="timer-card" role="listitem" aria-live="polite">
-          <h3>Kovo 11-oji</h3>
-          <p class="tagline">Nepriklausomybės atkūrimo diena</p>
-          <div class="countdown" data-month="3" data-day="11"></div>
-          <p class="next-date"></p>
-        </article>
-
-        <article class="timer-card" role="listitem" aria-live="polite">
-          <h3>Liepos 6-oji</h3>
-          <p class="tagline">Valstybės (Lietuvos karaliaus Mindaugo karūnavimo) diena</p>
-          <div class="countdown" data-month="7" data-day="6"></div>
-          <p class="next-date"></p>
-        </article>
+  <main id="turinys">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Lietuvos Respublikos himnas</p>
+          <h1>Tautiška giesmė</h1>
+          <p class="lead">
+            Informacinis puslapis, skirtas Lietuvos Respublikos himno tekstui ir klausymui.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#grotuvas">Klausyti himno</a>
+            <a class="button button-secondary" href="#tekstas">Skaityti tekstą</a>
+          </div>
+        </div>
+        <figure class="hero-figure">
+          <img src="assets/images/lietuvos-veliava.svg" alt="Lietuvos Respublikos vėliavos iliustracija" width="800" height="500">
+        </figure>
       </div>
-
-      <p class="note">
-        Laikmačiai automatiškai skaičiuoja iki artimiausios datos (vietiniu laiku).
-      </p>
     </section>
 
-    <hr class="divider" />
-
-    <!-- Himno garsas -->
-    <section aria-labelledby="audio">
-      <h2 id="audio">Himno įrašas</h2>
-
-      <div class="audio-player">
-        <audio id="hymn-audio" preload="metadata" controls>
-          <source src="assets/audio/tautiska-giesme.mp3" type="audio/mpeg">
-          <source src="assets/audio/tautiska-giesme.ogg" type="audio/ogg">
-          Jūsų naršyklė nepalaiko HTML5 audio. Atsisiųsti:
-          <a href="assets/audio/tautiska-giesme.mp3">MP3</a>
-        </audio>
-
-        <button id="play-toggle" class="btn" aria-label="Leisti / Pauzė">
-          ▶️ Leisti
-        </button>
-
-        <div class="audio-meta">
-          <span id="current-time">00:00</span> /
-          <span id="duration">--:--</span>
+    <section class="section" id="grotuvas" aria-labelledby="grotuvo-antraste">
+      <div class="container narrow">
+        <h2 id="grotuvo-antraste">Himno garso įrašas</h2>
+        <p>
+          Žemiau pateikiamas himno garso grotuvas. Jeigu įrašas neatkuriamas, įkelkite failą
+          <code>assets/audio/tautiska-giesme.mp3</code>.
+        </p>
+        <div class="card player-card">
+          <audio controls preload="none" class="audio-player">
+            <source src="assets/audio/tautiska-giesme.mp3" type="audio/mpeg">
+            Jūsų naršyklė nepalaiko garso atkūrimo.
+          </audio>
         </div>
       </div>
-
-      <p class="note">Patarimas: naudok 128–192 kbps MP3 (1–3 MB).</p>
     </section>
 
-    <hr class="divider" />
+    <section class="section" id="tekstas" aria-labelledby="teksto-antraste">
+      <div class="container narrow">
+        <h2 id="teksto-antraste">Himno tekstas</h2>
+        <div class="card anthem-card">
+          <div class="anthem-stanza" aria-label="Pirmoji strofa">
+            <p>Lietuva, Tėvyne mūsų,</p>
+            <p>Tu didvyrių žeme,</p>
+            <p>Iš praeities Tavo sūnūs</p>
+            <p>Te stiprybę semia.</p>
+          </div>
 
-    <!-- Himno tekstas -->
-    <section aria-labelledby="himnas">
-      <h2 id="himnas">Himno tekstas</h2>
+          <div class="anthem-stanza" aria-label="Antroji strofa">
+            <p>Tegul Tavo vaikai eina</p>
+            <p>Vien takais dorybės,</p>
+            <p>Tegul dirba Tavo naudai</p>
+            <p>Ir žmonių gėrybei.</p>
+          </div>
 
-      <article class="hymn" lang="lt" aria-label="Tautiškos giesmės tekstas">
-        <!-- data-start (sek.) – dėl „karaokės“ paryškinimo (adapteriuok pagal savo įrašą) -->
-        <p data-start="0"><strong>Lietuva, Tėvyne mūsų,</strong><br>
-        Tu didvyrių žeme,<br>
-        Iš praeities Tavo sūnūs<br>
-        Te stiprybę semia.</p>
+          <div class="anthem-stanza" aria-label="Trečioji strofa">
+            <p>Tegul saulė Lietuvoj</p>
+            <p>Tamsumas prašalina,</p>
+            <p>Ir šviesa, ir tiesa</p>
+            <p>Mūs žingsnius telydi.</p>
+          </div>
 
-        <p data-start="17">Tegu Tavo vaikai eina<br>
-        Vien takais dorybės,<br>
-        Tegu dirba Tavo naudai<br>
-        Ir žmonių gėrybei.</p>
-
-        <p data-start="34">Tegu saulė Lietuvoj<br>
-        Tamsumas prašalina,<br>
-        Ir šviesa, ir tiesa<br>
-        Mūs žingsnius telydi.</p>
-
-        <p data-start="52">Tegu meilė Lietuvos<br>
-        Dega mūsų širdyse,<br>
-        Vardan tos Lietuvos<br>
-        Vienybė težydi!</p>
-      </article>
-
-      <p class="source">Tekstas: Vincas Kudirka (1858–1899). Nacionalinis himnas (viešasis domenas).</p>
+          <div class="anthem-stanza" aria-label="Ketvirtoji strofa">
+            <p>Tegul meilė Lietuvos</p>
+            <p>Dega mūsų širdyse,</p>
+            <p>Vardan tos Lietuvos</p>
+            <p>Vienybė težydi.</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p><span>❤️ Lietuvai</span> • <span>Atviro kodo projektas (GitHub Pages)</span></p>
+    <div class="container footer-inner">
+      <p>© <span id="current-year"></span> Tautiška giesmė</p>
+      <p><a href="kontaktai.html">Kontaktai</a></p>
     </div>
   </footer>
-
-  <!-- Teisingas JS įkėlimas: vienintelis script su src -->
-  script.js</script>
 </body>
 </html>

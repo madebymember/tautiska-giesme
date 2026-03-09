@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Lietuvos Respublikos vėliava</title>
+  <desc id="desc">Geltonos, žalios ir raudonos spalvų Lietuvos vėliavos iliustracija.</desc>
+  <rect width="1200" height="250" fill="#fdb913"/>
+  <rect y="250" width="1200" height="250" fill="#006a44"/>
+  <rect y="500" width="1200" height="250" fill="#c1272d"/>
+</svg>
