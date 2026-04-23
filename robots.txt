@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tautiškagiesmė.lt/sitemap.xml
+Sitemap: https://tauti%C5%A1kagiesm%C4%97.lt/sitemap.xml
