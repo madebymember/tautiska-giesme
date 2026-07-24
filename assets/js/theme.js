@@ -41,7 +41,8 @@
 
   navButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
-      const menu = navMenus[index];
+      const targetId = button.getAttribute('aria-controls');
+      const menu = document.getElementById(targetId);
       if (!menu) return;
       const isOpen = menu.classList.toggle('open');
       button.setAttribute('aria-expanded', String(isOpen));
