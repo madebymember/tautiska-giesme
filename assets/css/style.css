@@ -243,13 +243,12 @@ h2 {
 
 .button-primary:hover,
 .button-primary:focus-visible {
-  background: #005539;
-  border-color: #005539;
+    filter: brightness(1.05);
 }
 
 .button-secondary {
-  background: var(--color-surface);
-  color: var(--color-text);
+    background: var(--color-surface);
+    color: var(--color-text);
 }
 
 .hero-figure {
